@@ -16,4 +16,3 @@ def add(a: float, b: float) -> float:
         float: The sum of the two float numbers.
     """
     return a + b
-
