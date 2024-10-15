@@ -4,7 +4,10 @@ This module provides a function to sum a list of floats.
 """
 
 
-def sum_list(input_list: list[float]) -> float:
+from typing import List
+
+
+def sum_list(input_list: List[float]) -> float:
     """
     A type-annotated function that takes a list of floats as an argument
     and returns their sum.
