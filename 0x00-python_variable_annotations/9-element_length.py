@@ -5,10 +5,10 @@ tuples with elements and their corresponding lengths.
 """
 
 
-from typing import List, Tuple, Sequence, Any
+from typing import List, Tuple, Interable, Any
 
 
-def element_length(lst: Sequence[Any]) -> List[Tuple[Any, int]]:
+def element_length(lst: Iterable[Any]) -> List[Tuple[Any, int]]:
     """
     A type-annotated function that takes a list of strings and returns
     a list of tuples where each tuple contains an element and its length.
