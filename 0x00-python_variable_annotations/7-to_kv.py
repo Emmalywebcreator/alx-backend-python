@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """
-This module provides a function that returns a tuple with a string and the square of a number.
+This module provides a function that returns a tuple with a
+string and the square of a number.
 """
 
 
@@ -15,9 +16,11 @@ def to_kv(k: str, v: Union[int, float]) -> Tuple[str, float]:
 
     Args:
         k (str): A string.
-        v (int | float): A number (int or float) whose square will be calculated.
+        v (int | float): A number (int or float) whose square will
+        be calculated.
 
     Returns:
-        Tuple[str, float]: A tuple with the string and the square of the number.
+        Tuple[str, float]: A tuple with the string and the square
+        of the number.
     """
     return (k, float(v**2))
