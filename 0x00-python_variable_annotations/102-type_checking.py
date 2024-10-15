@@ -8,7 +8,7 @@ elements.
 from typing import List, Tuple, Union
 
 
-def zoom_array(lst: Tuple[int, ...], factor: int = 2) -> List[int]:
+def zoom_array(lst: Tuple, factor: int = 2) -> List[int]:
     """
     Zoom into an array by repeating each element a specified number of times.
 
