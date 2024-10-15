@@ -3,6 +3,7 @@
 This is module that provides a funcction that returns the floor of a float.
 """
 
+
 import math
 
 
@@ -20,4 +21,3 @@ def floor(n: float) -> int:
         int: Tje floor value of the float.
     """
     return math.floor(n)
-        
