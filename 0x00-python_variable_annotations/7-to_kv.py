@@ -4,10 +4,10 @@ This module provides a function that returns a tuple with a string and the squar
 """
 
 
-from typing import Tuple
+from typing import Tuple, Union
 
 
-def to_kv(k: str, v: int | float) -> Tuple[str, float]:
+def to_kv(k: str, v: Union(int, float) -> Tuple[str, float]:
     """
     A type-annotated function that takes a string k and an int or float v,
     and returns a tuple. The first element is the string k, and the second
