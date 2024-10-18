@@ -6,7 +6,7 @@ Module to implement an asynchronous generator.
 
 import asyncio
 import random
-from typing import generator
+from typing import Generator
 
 
 async def async_generator() -> Generator[float, None, None]:
