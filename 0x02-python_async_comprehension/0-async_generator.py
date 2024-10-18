@@ -11,7 +11,7 @@ from typing import generator
 
 async def async_generator() -> Generator[float, None, None]:
     """
-    A coroutine that loops 10 times and asynchronously waits for 
+    A coroutine that loops 10 times and asynchronously waits for
     1 seconds before yielding a random float number between 0 and 10.
 
     Yields:
