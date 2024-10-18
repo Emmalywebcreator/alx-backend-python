@@ -8,7 +8,7 @@ import time
 wait_n = __import__('1-concurrent_coroutines').wait_n
 
 
-def measure_time(n: int, max_delay: int) -> float:
+async def measure_time(n: int, max_delay: int) -> float:
     """
     Measure the total time ti takes to execute wait_n coroutine
     and returns the average time.
