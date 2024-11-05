@@ -22,8 +22,9 @@ class TestAccessNestedMap(unittest.TestCase):
             self, nested_map: Mapping[str, Any], path: Tuple[str, ...],
             expected: Any
     ) -> None:
-         """
-        Test access_nested_map returns expected value for given nested_map and path.
+        """
+        Test access_nested_map returns expected value for given nested_map
+        and path.
         """
         self.assertEqual(access_nested_map(nested_map, path), expected)
 
