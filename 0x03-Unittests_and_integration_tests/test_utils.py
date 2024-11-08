@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 """
 Unit tests for access_nested_map function in utils module.
 """
