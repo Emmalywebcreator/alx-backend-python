@@ -7,8 +7,7 @@ import unittest
 from unittest.mock import patch, Mock
 from parameterized import parameterized
 from typing import Mapping, Tuple, Any
-from utils import access_nested_map
-from utils import get_json
+from utils import access_nested_map, get_json, memoize
 
 
 class TestAccessNestedMap(unittest.TestCase):
@@ -46,8 +45,30 @@ class TestAccessNestedMap(unittest.TestCase):
         self.assertEqual(str(context.exception), f"'{path[-1]}'")
 
 
+class TestMemoize(unittest.TestCase):
+    def test_memoize(self):
+        class TestClass:
+            def a_method(self):
+                return 42
+
+            @memoize
+            def a_property(self):
+                return self.a_method()
+
+        instance = TestClass()
+
+        with patch.object(
+                instance, 'a_method', return_value=42
+        ) as mock_method:
+            result_first_call = instance.a_property
+            result_second_call = instance.a_property
+
+            self.assertEqual(result_first_call, result_second_call)
+            mock_method.assert_called_once()
+
+
 class TestGetJson(unittest.TestCase):
-    """"Test cass for utils.get_json"""
+    """Test cass for utils.get_json"""
 
     @parameterized.expand([
         ("http://example.com", {"payload": True}),
