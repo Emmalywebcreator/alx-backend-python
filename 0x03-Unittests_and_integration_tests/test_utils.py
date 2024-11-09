@@ -46,7 +46,9 @@ class TestAccessNestedMap(unittest.TestCase):
 
 
 class TestMemoize(unittest.TestCase):
+    """Tests for the memoize decorator function."""
     def test_memoize(self):
+        """Tests that memoize caches the result after the first call."""
         class TestClass:
             def a_method(self):
                 return 42
